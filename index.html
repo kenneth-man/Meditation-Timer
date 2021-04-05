@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="shortcut icon" type="image/png" href="res/icon.png"> -->
+
+        <title>#18 &mdash; meditation timer</title>
+    </head>
+
+    <body>
+        <section class="section">
+            <div class="video">
+                <!--id selector on video element to change src in js-->
+                <video autoplay muted loop id="video-back">
+                    <source src="./res/background-video-rain.mp4" type="video/mp4">
+                    Your browser doesn't support this video
+                </video>
+            </div>
+
+            <div class="content">
+                <div class="content__column content__column--1" id="times-container">
+                    <button class="btn btn-timer btn-timer--1min center rounded-border transition">1 Minute</button>
+
+                    <button class="btn btn-timer btn-timer--5min center rounded-border transition">5 Minutes</button>
+
+                    <button class="btn btn-timer btn-timer--10min center rounded-border transition">10 Minutes</button>
+                </div>
+
+                <div class="content__column content__column--2">
+                    <button class="btn btn-pause-play center circle-border transition" id="control">
+                        <svg class="icon icon-large transition">
+                            <use href="./res/symbol-defs.svg#icon-play" id="pause-play"></use>
+                        </svg>
+                    </button>
+
+                    <h1 class="h1" id="timeDisplay">0:00</h1>
+                </div>
+
+                <div class="content__column content__column--3" id="weather-container">
+                    <button class="btn btn-weather btn-weather--rain center circle-border transition">
+                        <svg class="icon icon-small transition">
+                            <use href="./res/symbol-defs.svg#icon-water"></use>
+                        </svg>
+                    </button>
+
+                    <button class="btn btn-weather btn-weather--beach center circle-border transition">
+                        <svg class="icon icon-small transition">
+                            <use href="./res/symbol-defs.svg#icon-adjust"></use>
+                        </svg>
+                    </button>
+
+                    <button class="btn btn-weather btn-weather--wind center circle-border transition">
+                        <svg class="icon icon-small transition">
+                            <use href="./res/symbol-defs.svg#icon-air"></use>
+                        </svg>
+                    </button>
+
+                    <button class="btn btn-weather btn-weather--music center circle-border transition">
+                        <svg class="icon icon-small transition">
+                            <use href="./res/symbol-defs.svg#icon-headphones"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>

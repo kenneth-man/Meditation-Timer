@@ -1,0 +1,177 @@
+/*boiler plate project set-up (removing margin + padding, border box, root font-size, color...)*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/***************/
+
+.section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    filter: brightness(80%);
+}
+
+.content {
+    position: absolute;
+    top: 22.5%;
+    left: 6%;
+    height: 60%;
+    width: 85%;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__column {
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__column--1 {
+    height: 70%;
+}
+
+.content__column--2 {
+    height: 72%;
+    margin-left: 18vw;
+    margin-right: 19vw;
+}
+
+.content__column--3 {
+    height: 85%;
+}
+
+.btn {
+    height: max-content;
+    width: max-content;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-timer,
+.h1 {
+    font-family: 'Heebo';
+    color: #fff;
+}
+
+.btn-timer {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 15px;
+    border: 3px solid #fff;
+}
+
+.btn-timer:hover {
+    background-color: #fff;
+    color: rgb(163, 163, 163);
+}
+
+.btn-timer:active {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-pause-play {
+    padding: 60px;
+    border: 10px solid #fff;
+}
+
+.btn-pause-play:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+.btn-pause-play:active {
+    background: rgba(255,255,255,0.1);
+}
+
+.btn-weather {
+    padding: 20px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.btn-weather:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+}
+
+.btn-weather:active {
+    transform: translateY(0px);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.btn-weather--rain {
+    background-color: rgb(30, 87, 243);
+}
+
+.btn-weather--beach {
+    background-color: rgb(199, 47, 47);
+}
+
+.btn-weather--wind {
+    background-color: rgb(31, 199, 129);
+}
+
+.btn-weather--music {
+    background-color: rgb(148, 58, 250);
+}
+
+.icon {
+    fill: #fff;
+}
+
+.icon-large {
+    height: 200px;
+    width: 200px;
+}
+
+.icon-small {
+    height: 30px;
+    width: 30px;
+}
+
+.h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rounded-border {
+    border-radius: 5px;
+}
+
+.circle-border {
+    border-radius: 50%;
+}
+
+.transition {
+    transition: all 0.3s;
+}
